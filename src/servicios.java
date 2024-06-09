@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class servicios extends  deposito{
+public class servicios extends deposito{
     Double agua;
     Double luz;
     Double cnt;
@@ -82,12 +82,60 @@ public class servicios extends  deposito{
                 }else{
                     System.out.println("Ingresa una opcion correcta");
                 }
-                System.out.println("Su total es: " + saldo);
+                break;
+            case 2:
+                System.out.println("Servicio de Luz : ");
+                System.out.println("Su deuda a pagar es: $" + getLuz());
+                System.out.println("Desea Pagar: \n 1: Si pagar  \n 2: No pagar");
+                int opcion2 = sc.nextInt();
+                if (opcion2 == 1 && saldo > getLuz()) {
+                    saldo -= getLuz();
+                } else if (opcion2 == 1 && saldo < getLuz()) {
+                    System.out.println("No dispones de saldo");
+                } else if (opcion2 == 2) {
+                    System.out.println("Saliendo");
+                } else {
+                    System.out.println("Ingresa una opcion correcta");
+                }
+                break;
+            case 3:
+                System.out.println("Servicio de CNT : ");
+                System.out.println("Su deuda a pagar es: $" + getCnt());
+                System.out.println("Desea Pagar: \n 1: Si pagar  \n 2: No pagar");
+                int opcion3 = sc.nextInt();
+                if (opcion3 == 1 && saldo > getCnt()) {
+                    saldo -= getCnt();
+                } else if (opcion3 == 1 && saldo < getCnt()) {
+                    System.out.println("No dispones de saldo");
+                } else if (opcion3 == 2) {
+                    System.out.println("Saliendo");
+                } else {
+                    System.out.println("Ingresa una opcion correcta");
+                }
                 break;
 
+            case 4:
+                System.out.println("Servicio de SRI : ");
+                System.out.println("Su deuda a pagar es: $" + getSri());
+                System.out.println("Desea Pagar: \n 1: Si pagar  \n 2: No pagar");
+                int opcion4 = sc.nextInt();
+                if (opcion4 == 1 && saldo > getSri()) {
+                    saldo -= getSri();
+                } else if (opcion4 == 1 && saldo < getSri()) {
+                    System.out.println("No dispones de saldo");
+                } else if (opcion4 == 2) {
+                    System.out.println("Saliendo");
+                } else {
+                    System.out.println("Ingresa una opcion correcta");
+                }
+                break;
             default:
                 System.out.println("Seleccione una opcion correcta");
                 break;
         }
+        System.out.println("------------------------------");
+        System.out.println("Nuevo saldo: " + saldo);
+        System.out.println("------------------------------");
     }
+
 }

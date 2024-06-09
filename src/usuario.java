@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class usuario {
-    String usuario;
+    public String usuario;
     int password;
-    double saldo = 30;
+    double saldo = 3000;
 
     public usuario() {
     }
@@ -44,10 +44,10 @@ public class usuario {
             System.out.print("Ingrese su usuario: ");
             String usuarioo = sc.nextLine();
             System.out.print("Ingrese su clave: ");
-            int clave = sc.nextInt();
+            int clavee = sc.nextInt();
             sc.nextLine();
-            if (usuarioo.equals(usuario) && clave == clave) {
-                System.out.println("Ingrese correctamente al sistema");
+            if (usuarioo.equals(usuario) && clavee == password) {
+                System.out.println("Ingreso correctamente al sistema");
                 break;
             }else{
                 System.out.println("Vuelva a intentarlo");
@@ -55,7 +55,4 @@ public class usuario {
         }
     }
 
-    public void mostrarInfo(){
-
-    }
 }

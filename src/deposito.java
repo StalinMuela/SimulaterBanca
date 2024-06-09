@@ -1,3 +1,4 @@
+import javax.xml.transform.Source;
 import java.util.Scanner;
 
 public class deposito extends usuario {
@@ -45,7 +46,9 @@ public class deposito extends usuario {
         System.out.println("Ingrese el valor a depositar: ");
         depositos = sc.nextDouble();
         saldo += depositos;
+        System.out.println("------------------------------");
         System.out.println("Nuevo saldo: " + saldo);
+        System.out.println("------------------------------");
         return saldo;
     }
 
@@ -54,7 +57,9 @@ public class deposito extends usuario {
         System.out.println("Ingrese el valor a retirar: ");
         retiros = sc.nextDouble();
         saldo -= retiros;
+        System.out.println("------------------------------");
         System.out.println("Nuevo saldo: " + saldo);
+        System.out.println("------------------------------");
         return saldo;
     }
 
@@ -62,13 +67,19 @@ public class deposito extends usuario {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese el valor a transferir: ");
         transferencia = sc.nextDouble();
-        System.out.println("Ingrese el nombre del usuario a retirar: ");
+        System.out.println("Ingrese el nombre del usuario a depositar: ");
         String usuario = sc.next();
         if (saldo == 0 && saldo < transferencia){
             System.out.println("No existe fondo insuficiente");
         }else{
             saldo -= transferencia;
         }
+        System.out.println("-------- COMPROBANTE ---------");
+        System.out.println("Nombre: " + usuario);
+        System.out.println("Valor: " + transferencia);
+        System.out.println("------------------------------");
+        System.out.println("Nuevo saldo: " + saldo);
+        System.out.println("------------------------------");
         return saldo;
     }
 
