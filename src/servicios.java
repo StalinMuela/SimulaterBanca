@@ -84,7 +84,7 @@ public class servicios extends  deposito{
                 }
                 System.out.println("Su total es: " + saldo);
                 break;
-                
+
             default:
                 System.out.println("Seleccione una opcion correcta");
                 break;

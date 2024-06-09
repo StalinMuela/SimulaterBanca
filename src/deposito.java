@@ -71,15 +71,6 @@ public class deposito extends usuario {
         }
         return saldo;
     }
-    /*
-    public void mostrar() {
-        depositar();
-        retirar();
-        transferencia();
-        servicios servicio = new servicios();
-        servicio.pagarServicios(saldo);
-    }
-    */
 
 
 
